@@ -10,6 +10,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("Views/MainScreen.fxml"));
         primaryStage.setTitle("Hello World");;
+        root.getStylesheets().add("Style.css");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }

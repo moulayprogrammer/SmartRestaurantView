@@ -3,7 +3,10 @@ package Controllers;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 
 import java.io.IOException;
 import java.net.URL;
@@ -13,17 +16,23 @@ public class Controller implements Initializable {
 
     @FXML
     private AnchorPane mainPane;
+    @FXML
+    ImageView logo,userVector;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        Image image = new Image("Images/Logo.png");
+        logo.setImage(image);
+        image = new Image("Images/Vector.png");
+        userVector.setImage(image);
 
+        LaunchProviderScreen();
     }
 
-    @FXML
-    private void goToSecond(){
+    private void LaunchProviderScreen(){
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/SecondScreen.fxml"));
-            AnchorPane temp = loader.load();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/ProviderScreen.fxml"));
+            BorderPane temp = loader.load();
             mainPane.getChildren().setAll(temp);
         } catch (IOException e) {
             e.printStackTrace();

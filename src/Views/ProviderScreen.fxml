@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="RIGHT_TO_LEFT" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #F8F8F8;" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <AnchorPane prefHeight="70.0" prefWidth="900.0" style="-fx-background-color: FFF;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="1.0" layoutY="27.0" text="قائمة الموردين" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="27.0" AnchorPane.topAnchor="27.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox layoutX="365.0" layoutY="44.0" prefHeight="70.0" prefWidth="200.0" spacing="10.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="العدد">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label text="2513">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Label>
+                        <JFXComboBox labelFloat="true" prefWidth="150.0" promptText="فرز" visibleRowCount="5" />
+                        <JFXTextField labelFloat="true" promptText="بحث" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                     <children>
+                        <Button mnemonicParsing="false" text="اضافة مورد جديد " />
+                        <Button mnemonicParsing="false" text="المزيد" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <VBox layoutX="394.0" layoutY="189.0" maxHeight="1.7976931348623157E308" spacing="20.0" style="-fx-background-color: FFF;" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="140.0">
+               <children>
+                  <TableView prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                    <columns>
+                      <TableColumn prefWidth="75.0" text="C1" />
+                      <TableColumn prefWidth="75.0" text="C2" />
+                    </columns>
+                  </TableView>
+                  <HBox>
+                     <children>
+                        <HBox maxWidth="1.7976931348623157E308" spacing="15.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Button mnemonicParsing="false" text="حفظ" />
+                              <Button mnemonicParsing="false" text="إلغاء" />
+                           </children>
+                        </HBox>
+                        <HBox spacing="15.0">
+                           <children>
+                              <Button mnemonicParsing="false" text="طباعة " />
+                              <Button mnemonicParsing="false" text="استخراج Exel" />
+                              <Button mnemonicParsing="false" text="إستخراج PDF" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="40.0" left="20.0" right="20.0" top="20.0" />
+               </padding></VBox>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
