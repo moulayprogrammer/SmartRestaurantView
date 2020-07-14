@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="RIGHT_TO_LEFT" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Controller">
+   <center>
+      <AnchorPane fx:id="mainPane" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #FFF;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="268.0" layoutY="335.0" text=" Changed Pane">
+               <font>
+                  <Font size="53.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+   </center>
+   <left>
+      <VBox prefWidth="300" spacing="10.0" style="-fx-background-color: #EE3D48;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" spacing="20.0">
+               <children>
+                  <ImageView fx:id="logo" fitWidth="250.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS" />
+                  <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
+                     <children>
+                        <ImageView fx:id="userVector" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS" />
+                        <VBox alignment="CENTER" fillWidth="false" spacing="3.0">
+                           <children>
+                              <Label styleClass="label-menu" text="مولاي القايم" />
+                              <Label styleClass="label-menu" text="مستخدم" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </VBox>
+            <VBox alignment="TOP_RIGHT" spacing="10.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Button alignment="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="btn-menu" text="قائمة الموردين" textOverrun="CLIP" VBox.vgrow="ALWAYS">
+                   </Button>
+                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="btn-menu" text="قائمة السلع" VBox.vgrow="ALWAYS">
+                    </Button>
+                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="btn-menu" text=" قائمة المشتريات" VBox.vgrow="ALWAYS">
+                   </Button>
+               </children>
+            </VBox>
+            <HBox>
+               <children>
+                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="btn-menu" HBox.hgrow="ALWAYS">
+
+                  </Button>
+                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="btn-menu" HBox.hgrow="ALWAYS">
+
+                  </Button>
+                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="btn-menu" HBox.hgrow="ALWAYS">
+                     </Button>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="30.0" top="30.0" />
+         </padding>
+      </VBox>
+   </left>
+</BorderPane>

@@ -1,0 +1,85 @@
+@font-face {
+    src: url('../fonts/HSDream-Regular.otf');
+}
+
+.container{
+	-fx-background-color:#FBFBFB;
+	
+}
+.bar-top{
+	-fx-background-color:#ffffff;
+	-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+}
+.font-hs-dream{
+	-fx-font-family: 'HSDream-Regular';
+}
+.number-list{
+	-fx-font-family: 'HSDream-Regular';
+}
+.number-of-list{
+	-fx-font-family: 'HSDream-Regular';
+}
+.add-new-item{
+	-fx-background-color:#42B3C5;
+	-fx-font-family: 'HSDream-Regular';
+	-fx-border-radius:3;
+}
+.add-new-item icon{
+	-fx-font-size:20;
+}
+	
+.more-button{
+	-fx-background-color:#ffffff;
+	-fx-font-family: 'HSDream-Regular';
+    -fx-background-radius:0;
+    -fx-border-color:#D5D5D5;
+    -fx-border-width: 1 1 1 1;
+    -fx-background-insets: 0;
+	-fx-border-radius:3;
+}
+.save-button{
+	-fx-background-color:#42B3C5;
+	-fx-font-family: 'HSDream-Regular';
+}
+.cancle-button{
+	-fx-background-color:#818181;
+	-fx-font-family: 'HSDream-Regular';
+}
+.printer-button{
+	-fx-background-color:#EE3D48;
+	-fx-font-family: 'HSDream-Regular';
+}
+.extract-button{
+	-fx-background-color:#FBFBFB;
+	-fx-font-family: 'HSDream-Regular';
+	-fx-border-color:#D5D5D5;
+    -fx-border-width: 1 1 1 1;
+    -fx-background-insets: 0;
+	-fx-border-radius:3;
+}
+.table{
+	-fx-background-color:#ffffff;
+	-fx-border-color:#ffffff;
+}
+.column-table{
+	-fx-background-color:#ffffff;
+	-fx-border-color:#B5B5B5;
+    -fx-border-width: 0 0 1 0;
+	-fx-font-family: 'HSDream-Regular';
+	-fx-font-size:14;
+	-fx-padding-bottom:10px;
+	-fx-text-fill: #848484;
+    
+}
+.search-input{
+	-fx-border-color:#D5D5D5;
+    -fx-border-width: 1 1 1 1;
+    -fx-background-insets: 0;
+	-fx-border-radius:3;
+	-fx-background-color: #ffffff;
+	-fx-font-family: 'HSDream-Regular';
+}
+.sorted-by{
+	-fx-font-family: 'HSDream-Regular';
+	
+}
