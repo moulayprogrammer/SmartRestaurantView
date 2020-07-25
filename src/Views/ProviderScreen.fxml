@@ -23,7 +23,7 @@
          <children>
             <Label layoutX="55.0" layoutY="27.0" styleClass="font-hs-dream" text="قائمة الموردين" textFill="#777777" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="27.0">
                <font>
-                  <Font size="23.0" />
+                  <Font size="22.0" />
                </font>
             </Label>
          </children>
@@ -102,7 +102,7 @@
                   </HBox>
                </children>
             </HBox>
-            <VBox layoutX="394.0" layoutY="189.0" maxHeight="1.7976931348623157E308" spacing="20.0" style="-fx-background-color: FFF;" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="140.0">
+            <VBox layoutX="394.0" layoutY="189.0" maxHeight="1.7976931348623157E308" spacing="20.0" style="-fx-background-color: FFF;" styleClass="container-table" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="140.0">
                <children>
                   <TableView maxWidth="900.0" minWidth="850.0" prefWidth="900.0" styleClass="table" VBox.vgrow="ALWAYS">
                     <columns>
@@ -111,7 +111,10 @@
                               <JFXCheckBox checkedColor="#ee3d48" text="0" textFill="WHITE" unCheckedColor="#848484">
                                  <font>
                                     <Font size="9.0" />
-                                 </font></JFXCheckBox>
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></JFXCheckBox>
                            </graphic></TableColumn>
                       <TableColumn prefWidth="90.0" styleClass="column-table">
                            <graphic>
@@ -125,6 +128,9 @@
                         <TableColumn prefWidth="90.0" styleClass="column-table" text="مدان بـ" />
                         <TableColumn prefWidth="130.0" styleClass="column-table" text="رقم التسجيل" />
                     </columns>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
                   </TableView>
                   <HBox>
                      <children>

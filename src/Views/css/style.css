@@ -19,7 +19,7 @@
 .number-of-list{
 	-fx-font-family: 'HSDream-Regular';
 }
-.add-new-item{
+.add-new-item,.add-product-factory,.more-button-products{
 	-fx-background-color:#42B3C5;
 	-fx-font-family: 'HSDream-Regular';
 	-fx-border-radius:3;
@@ -27,7 +27,15 @@
 .add-new-item icon{
 	-fx-font-size:20;
 }
-	
+.add-product-factory:hover{
+	-fx-font-size:13;
+	-fx-background-color:#3DAABB;
+}
+.more-button-products:hover{
+	-fx-font-size:12;
+	-fx-background-color:#3DAABB;	
+}
+
 .more-button{
 	-fx-background-color:#ffffff;
 	-fx-font-family: 'HSDream-Regular';
@@ -46,17 +54,35 @@
 	-fx-background-color:#FBFBFB
 }
 
-.save-button{
+.save-button,.save-button-small{
 	-fx-background-color:#42B3C5;
 	-fx-font-family: 'HSDream-Regular';
 }
-.cancle-button{
+
+.save-button-small:hover{
+	-fx-font-size:13;
+	-fx-background-color:#3DAABB;
+}
+.cancle-button,.cancle-button-small{
 	-fx-background-color:#818181;
 	-fx-font-family: 'HSDream-Regular';
 }
-.printer-button{
+.cancle-button-small:hover{
+	-fx-font-size:13;
+	-fx-background-color:#989898;
+}
+.printer-button,.remove-product-from-factory,.printer-button-small{
 	-fx-background-color:#EE3D48;
 	-fx-font-family: 'HSDream-Regular';
+}
+.printer-button-small:hover{
+	-fx-font-size:13;
+	-fx-background-color:#E2323D;
+}
+.remove-product-from-factory:hover{
+	-fx-font-size:13;
+	-fx-background-color:#E2323D;
+	
 }
 .extract-button{
 	-fx-background-color:#FBFBFB;
@@ -153,4 +179,38 @@
     -fx-border-width: 5px;
     -fx-border-color: white;
    
+}
+.show-all-products{
+	-fx-background-color:#FBFBFB;
+	-fx-border-width: 1 1 1 1;
+    -fx-background-insets: 0;
+	-fx-border-radius:5;
+	-fx-border-color:#D4D4D4;
+}
+.show-all-products:hover{
+	-fx-background-color:#F1F1F1;
+}
+
+.list-view-products{
+	-fx-border-color:white;
+}
+
+.add-delete-quantity-product-anchor{
+	-fx-background-color:#F8F8F8;
+	-fx-border-width: 1 1 1 1;
+    -fx-background-insets: 0;
+	-fx-border-radius:0 0 5 5;
+	-fx-border-color:#D5D5D5;
+}
+.select-product-factory{
+	-fx-border-width: 1 1 1 1;
+    -fx-background-insets: 0;
+	-fx-border-radius:5;
+	-fx-border-color:#D5D5D5;
+}
+.container-table{
+	-fx-border-width: 1 1 1 1;
+    -fx-background-insets: 0;
+	-fx-border-radius:5;
+	-fx-border-color:#D5D5D5;
 }

@@ -12,6 +12,7 @@ public class Main extends Application {
         primaryStage.setTitle("Hello World");;
         root.getStylesheets().add("Style.css");
         primaryStage.setScene(new Scene(root));
+        primaryStage.setMaximized(true);
         primaryStage.show();
     }
 

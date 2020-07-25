@@ -1,27 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.gluonhq.charm.glisten.control.Icon?>
 <?import com.jfoenix.controls.JFXCheckBox?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="RIGHT_TO_LEFT" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #F8F8F8;" stylesheets="@css/style.css" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="RIGHT_TO_LEFT" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #F8F8F8;" stylesheets="@css/style.css" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <top>
       <AnchorPane prefHeight="70.0" prefWidth="900.0" style="-fx-background-color: FFF;" styleClass="bar-top" BorderPane.alignment="CENTER">
          <children>
             <Label layoutX="55.0" layoutY="27.0" styleClass="font-hs-dream" text="قائمة الموردين" textFill="#777777" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="27.0">
                <font>
-                  <Font size="23.0" />
+                  <Font size="22.0" />
                </font>
             </Label>
          </children>
@@ -53,7 +55,7 @@
                            </font>
                         </Label>
                         <ComboBox maxHeight="32.0" maxWidth="97.0" minHeight="32.0" minWidth="97.0" prefHeight="32.0" prefWidth="97.0" promptText="الكل" styleClass="search-input" />
-                        <TextField maxHeight="32.0" maxWidth="210.0" minHeight="32.0" minWidth="210.0" prefHeight="32.0" prefWidth="210.0" styleClass="search-input" text="بحث">
+                        <TextField maxHeight="32.0" maxWidth="210.0" minHeight="32.0" minWidth="210.0" prefHeight="32.0" prefWidth="210.0" promptText="بحث" styleClass="search-input">
                            <font>
                               <Font size="15.0" />
                            </font>
@@ -70,12 +72,29 @@
                               <Font size="16.0" />
                            </font>
                            <graphic>
-                              <Icon content="PLUS_ONE" />
-                           </graphic></Button>
-                        <Button maxHeight="35.0" maxWidth="81.0" minHeight="35.0" minWidth="81.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="81.0" styleClass="more-button" text="المزيد" textFill="#42b3c5">
+                              <ImageView fitHeight="52.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/add.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <Button contentDisplay="RIGHT" maxHeight="35.0" maxWidth="81.0" minHeight="35.0" minWidth="81.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="81.0" styleClass="more-button" text="المزيد" textFill="#42b3c5">
                            <font>
                               <Font size="16.0" />
-                           </font></Button>
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="14.0" fitWidth="8.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/3-dots-png-1.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
                      </children>
                      <HBox.margin>
                         <Insets />
@@ -83,23 +102,35 @@
                   </HBox>
                </children>
             </HBox>
-            <VBox layoutX="394.0" layoutY="189.0" maxHeight="1.7976931348623157E308" spacing="20.0" style="-fx-background-color: FFF;" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="140.0">
+            <VBox layoutX="394.0" layoutY="189.0" maxHeight="1.7976931348623157E308" spacing="20.0" style="-fx-background-color: FFF;" styleClass="container-table" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="140.0">
                <children>
-                  <TableView styleClass="table" VBox.vgrow="ALWAYS">
+                  <TableView maxWidth="900.0" minWidth="850.0" prefWidth="900.0" styleClass="table" VBox.vgrow="ALWAYS">
                     <columns>
+                      <TableColumn prefWidth="70.0" styleClass="column-table">
+                           <graphic>
+                              <JFXCheckBox checkedColor="#ee3d48" text="0" textFill="WHITE" unCheckedColor="#848484">
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></JFXCheckBox>
+                           </graphic></TableColumn>
                       <TableColumn prefWidth="90.0" styleClass="column-table">
                            <graphic>
-                              <JFXCheckBox checkedColor="#ee3d48" text="0" textFill="WHITE" unCheckedColor="#848484" />
+                              <Label text="الإسم" />
                            </graphic></TableColumn>
-                      <TableColumn prefWidth="110.0" styleClass="column-table" text="الإسم" />
-                        <TableColumn prefWidth="110.0" styleClass="column-table" text="اللقب" />
-                        <TableColumn prefWidth="110.0" styleClass="column-table" text="الوظيفة" />
-                        <TableColumn prefWidth="140.0" styleClass="column-table" text="العنوان" />
-                        <TableColumn prefWidth="130.0" styleClass="column-table" text="رقم الهاتف" />
-                        <TableColumn prefWidth="110.0" styleClass="column-table" text="دائن" />
-                        <TableColumn prefWidth="110.0" styleClass="column-table" text="مدان بـ" />
-                        <TableColumn prefWidth="150.0" styleClass="column-table" text="رقم التسجيل" />
+                        <TableColumn prefWidth="90.0" styleClass="column-table" text="اللقب" />
+                        <TableColumn prefWidth="90.0" styleClass="column-table" text="الوظيفة" />
+                        <TableColumn editable="false" prefWidth="120.0" sortable="false" styleClass="column-table" text="العنوان" />
+                        <TableColumn prefWidth="90.0" styleClass="column-table" text="رقم الهاتف" />
+                        <TableColumn prefWidth="90.0" styleClass="column-table" text="دائن" />
+                        <TableColumn prefWidth="90.0" styleClass="column-table" text="مدان بـ" />
+                        <TableColumn prefWidth="130.0" styleClass="column-table" text="رقم التسجيل" />
                     </columns>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
                   </TableView>
                   <HBox>
                      <children>
@@ -108,11 +139,34 @@
                               <Button maxHeight="28.0" maxWidth="70.0" minHeight="28.0" minWidth="70.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="70.0" styleClass="save-button" text="حفظ" textFill="WHITE">
                                  <font>
                                     <Font size="14.0" />
-                                 </font></Button>
-                              <Button maxHeight="28.0" maxWidth="70.0" minHeight="28.0" minWidth="70.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="70.0" styleClass="cancle-button" text="إلغاء" textFill="WHITE">
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="16.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Images/check.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Button>
+                              <Button maxHeight="28.0" maxWidth="90.0" minHeight="28.0" minWidth="90.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="90.0" styleClass="cancle-button" text="إلغاء" textFill="WHITE">
                                  <font>
                                     <Font size="15.0" />
-                                 </font></Button>
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Images/close.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <padding>
+                                    <Insets right="10.0" />
+                                 </padding>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Button>
                            </children>
                         </HBox>
                         <HBox spacing="15.0">
@@ -120,9 +174,39 @@
                               <Button maxHeight="30.0" maxWidth="84.0" minHeight="30.0" minWidth="84.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="84.0" styleClass="printer-button" text="طباعة " textFill="WHITE">
                                  <font>
                                     <Font size="15.0" />
-                                 </font></Button>
-                              <Button maxHeight="30.0" maxWidth="117.0" minHeight="30.0" minWidth="117.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="117.0" styleClass="extract-button" text="استخراج Exel" textFill="#828282" />
-                              <Button maxHeight="30.0" maxWidth="117.0" minHeight="30.0" minWidth="117.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="117.0" styleClass="extract-button" text="إستخراج PDF" textFill="#828282" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="16.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Images/printer.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Button>
+                              <Button maxHeight="30.0" maxWidth="117.0" minHeight="30.0" minWidth="117.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="117.0" styleClass="extract-button" text="استخراج Exel" textFill="#828282">
+                                 <graphic>
+                                    <ImageView fitHeight="16.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Images/file.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Button>
+                              <Button maxHeight="30.0" maxWidth="117.0" minHeight="30.0" minWidth="117.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="117.0" styleClass="extract-button" text="إستخراج PDF" textFill="#828282">
+                                 <graphic>
+                                    <ImageView fitHeight="16.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Images/file-text.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Button>
                            </children>
                         </HBox>
                      </children>
