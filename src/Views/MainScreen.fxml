@@ -23,7 +23,7 @@
          </children></AnchorPane>
    </center>
    <left>
-      <VBox prefWidth="300" spacing="10.0" style="-fx-background-color: #EE3D48;" BorderPane.alignment="CENTER">
+      <VBox maxWidth="300.0" minWidth="300.0" prefWidth="300" spacing="10.0" style="-fx-background-color: #EE3D48;" BorderPane.alignment="CENTER">
          <children>
             <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                <image>

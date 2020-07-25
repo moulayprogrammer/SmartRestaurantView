@@ -17,7 +17,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="RIGHT_TO_LEFT" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #F8F8F8;" stylesheets="@css/style.css" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="RIGHT_TO_LEFT" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #F8F8F8;" stylesheets="@css/style.css" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <top>
       <AnchorPane prefHeight="70.0" prefWidth="900.0" style="-fx-background-color: FFF;" styleClass="bar-top" BorderPane.alignment="CENTER">
          <children>
@@ -104,26 +104,26 @@
             </HBox>
             <VBox layoutX="394.0" layoutY="189.0" maxHeight="1.7976931348623157E308" spacing="20.0" style="-fx-background-color: FFF;" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="140.0">
                <children>
-                  <TableView styleClass="table" VBox.vgrow="ALWAYS">
+                  <TableView maxWidth="900.0" minWidth="850.0" prefWidth="900.0" styleClass="table" VBox.vgrow="ALWAYS">
                     <columns>
-                      <TableColumn prefWidth="90.0" styleClass="column-table">
+                      <TableColumn prefWidth="70.0" styleClass="column-table">
                            <graphic>
                               <JFXCheckBox checkedColor="#ee3d48" text="0" textFill="WHITE" unCheckedColor="#848484">
                                  <font>
                                     <Font size="9.0" />
                                  </font></JFXCheckBox>
                            </graphic></TableColumn>
-                      <TableColumn prefWidth="110.0" styleClass="column-table">
+                      <TableColumn prefWidth="90.0" styleClass="column-table">
                            <graphic>
                               <Label text="الإسم" />
                            </graphic></TableColumn>
-                        <TableColumn prefWidth="110.0" styleClass="column-table" text="اللقب" />
-                        <TableColumn prefWidth="110.0" styleClass="column-table" text="الوظيفة" />
-                        <TableColumn editable="false" prefWidth="140.0" sortable="false" styleClass="column-table" text="العنوان" />
-                        <TableColumn prefWidth="130.0" styleClass="column-table" text="رقم الهاتف" />
-                        <TableColumn prefWidth="110.0" styleClass="column-table" text="دائن" />
-                        <TableColumn prefWidth="110.0" styleClass="column-table" text="مدان بـ" />
-                        <TableColumn prefWidth="150.0" styleClass="column-table" text="رقم التسجيل" />
+                        <TableColumn prefWidth="90.0" styleClass="column-table" text="اللقب" />
+                        <TableColumn prefWidth="90.0" styleClass="column-table" text="الوظيفة" />
+                        <TableColumn editable="false" prefWidth="120.0" sortable="false" styleClass="column-table" text="العنوان" />
+                        <TableColumn prefWidth="90.0" styleClass="column-table" text="رقم الهاتف" />
+                        <TableColumn prefWidth="90.0" styleClass="column-table" text="دائن" />
+                        <TableColumn prefWidth="90.0" styleClass="column-table" text="مدان بـ" />
+                        <TableColumn prefWidth="130.0" styleClass="column-table" text="رقم التسجيل" />
                     </columns>
                   </TableView>
                   <HBox>
