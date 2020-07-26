@@ -58,9 +58,16 @@
 	-fx-background-color:#42B3C5;
 	-fx-font-family: 'HSDream-Regular';
 }
+.add-product{
+	-fx-background-color:#42B3C5;
+	
+}
 
 .save-button-small:hover{
 	-fx-font-size:13;
+	-fx-background-color:#3DAABB;
+}
+.add-product:hover{
 	-fx-background-color:#3DAABB;
 }
 .cancle-button,.cancle-button-small{
@@ -213,4 +220,14 @@
     -fx-background-insets: 0;
 	-fx-border-radius:5;
 	-fx-border-color:#D5D5D5;
+}
+.pagination-button{
+	-fx-background-color: #F2F2F2;
+}
+.pagination-button:hover{
+	-fx-background-color:#E8E8E8;
+	
+}
+.image-close-pop:hover{
+	-fx-opacity:1;
 }
