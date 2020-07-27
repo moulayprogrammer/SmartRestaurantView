@@ -21,17 +21,17 @@ public class Controller implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        Image image = new Image("Images/Logo.png");
+        /*Image image = new Image("Images/Logo.png");
         logo.setImage(image);
         image = new Image("Images/Vector.png");
-        userVector.setImage(image);
+        userVector.setImage(image);*/
 
         LaunchProviderScreen();
     }
 
     private void LaunchProviderScreen(){
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/ProviderScreen.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/AddFactoryBuy.fxml"));
             BorderPane temp = loader.load();
             mainPane.getChildren().setAll(temp);
         } catch (IOException e) {
