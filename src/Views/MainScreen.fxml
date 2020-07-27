@@ -126,15 +126,15 @@
                   </HBox>
                   <HBox layoutX="10.0" layoutY="60.0" opacity="0.85" prefHeight="40.0" prefWidth="300.0" styleClass="parent-menu-item">
                      <children>
-                        <ImageView fitHeight="36.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="32.0" fitWidth="16.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../Images/sales.png" />
+                              <Image url="@../Images/file-plus.png" />
                            </image>
                            <HBox.margin>
-                              <Insets left="30.0" top="8.0" />
+                              <Insets left="30.0" top="9.0" />
                            </HBox.margin>
                         </ImageView>
-                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="39.0" styleClass="btn-menu" text="قائمة المبيعات" textOverrun="CLIP">
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="39.0" styleClass="btn-menu" text="قائمة الفواتير" textOverrun="CLIP">
                            <HBox.margin>
                               <Insets />
                            </HBox.margin>

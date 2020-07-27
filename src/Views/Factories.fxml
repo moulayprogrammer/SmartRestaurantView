@@ -21,7 +21,7 @@
    <top>
       <AnchorPane prefHeight="70.0" prefWidth="900.0" style="-fx-background-color: FFF;" styleClass="bar-top" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="55.0" layoutY="27.0" styleClass="font-hs-dream" text="قائمة الموردين" textFill="#777777" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="27.0">
+            <Label layoutX="55.0" layoutY="27.0" styleClass="font-hs-dream" text="قائمة الفواتير" textFill="#777777" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="27.0">
                <font>
                   <Font size="22.0" />
                </font>
@@ -82,7 +82,7 @@
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
                      <children>
-                        <Button maxHeight="35.0" maxWidth="150.0" minHeight="35.0" minWidth="150.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="150.0" styleClass="add-new-item" text="اضافة مورد جديد " textFill="WHITE">
+                        <Button maxHeight="35.0" maxWidth="150.0" minHeight="35.0" minWidth="150.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="150.0" styleClass="add-new-item" text="إضافة فاتورة جديدة" textFill="WHITE">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -121,7 +121,7 @@
                <children>
                   <TableView maxWidth="900.0" minWidth="850.0" prefWidth="900.0" styleClass="table" VBox.vgrow="ALWAYS">
                     <columns>
-                      <TableColumn prefWidth="70.0" styleClass="column-table">
+                      <TableColumn prefWidth="85.0" styleClass="column-table">
                            <graphic>
                               <JFXCheckBox checkedColor="#ee3d48" text="0" textFill="WHITE" unCheckedColor="#848484">
                                  <font>
@@ -131,17 +131,15 @@
                                     <Cursor fx:constant="HAND" />
                                  </cursor></JFXCheckBox>
                            </graphic></TableColumn>
-                      <TableColumn prefWidth="90.0" styleClass="column-table">
+                      <TableColumn prefWidth="130.0" styleClass="column-table">
                            <graphic>
-                              <Label text="الإسم" />
+                              <Label text="رقم الفاتورة" />
                            </graphic></TableColumn>
-                        <TableColumn prefWidth="90.0" styleClass="column-table" text="اللقب" />
-                        <TableColumn prefWidth="90.0" styleClass="column-table" text="الوظيفة" />
-                        <TableColumn editable="false" prefWidth="120.0" sortable="false" styleClass="column-table" text="العنوان" />
-                        <TableColumn prefWidth="90.0" styleClass="column-table" text="رقم الهاتف" />
-                        <TableColumn prefWidth="90.0" styleClass="column-table" text="دائن" />
-                        <TableColumn prefWidth="90.0" styleClass="column-table" text="مدان بـ" />
-                        <TableColumn prefWidth="130.0" styleClass="column-table" text="رقم التسجيل" />
+                        <TableColumn prefWidth="130.0" styleClass="column-table" text="تاريخ الفاتورة" />
+                        <TableColumn prefWidth="130.0" styleClass="column-table" text="إسم المورد" />
+                        <TableColumn editable="false" prefWidth="130.0" sortable="false" styleClass="column-table" text="المدفوع" />
+                        <TableColumn editable="false" prefWidth="130.0" sortable="false" styleClass="column-table" text="مدان بـ" />
+                        <TableColumn prefWidth="130.0" styleClass="column-table" text="الإجمالي" />
                     </columns>
                      <VBox.margin>
                         <Insets top="10.0" />

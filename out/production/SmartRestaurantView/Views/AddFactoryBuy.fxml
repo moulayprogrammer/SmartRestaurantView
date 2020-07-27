@@ -100,14 +100,19 @@
                                     <Insets bottom="5.0" />
                                  </VBox.margin>
                               </Label>
-                              <TextField promptText="إسم">
+                              <TextField focusTraversable="false" promptText="إسم">
                                  <font>
                                     <Font name="HSDream-Regular" size="12.0" />
                                  </font>
                               </TextField>
+                              <Label text="خطأ" textFill="RED">
+                                 <font>
+                                    <Font name="HSDream-Regular" size="12.0" />
+                                 </font>
+                              </Label>
                            </children>
                            <HBox.margin>
-                              <Insets right="10.0" />
+                              <Insets right="10.0" top="17.0" />
                            </HBox.margin>
                         </VBox>
                         <VBox alignment="CENTER" layoutX="210.0" layoutY="10.0" prefHeight="200.0" prefWidth="110.0">
@@ -120,10 +125,15 @@
                                     <Insets bottom="5.0" />
                                  </VBox.margin>
                               </Label>
-                              <TextField promptText="0" />
+                              <TextField focusTraversable="false" promptText="0" />
+                              <Label text="خطأ" textFill="RED">
+                                 <font>
+                                    <Font name="HSDream-Regular" size="12.0" />
+                                 </font>
+                              </Label>
                            </children>
                            <HBox.margin>
-                              <Insets left="10.0" />
+                              <Insets left="10.0" top="17.0" />
                            </HBox.margin>
                         </VBox>
                         <VBox alignment="CENTER" layoutX="310.0" layoutY="10.0" prefHeight="200.0" prefWidth="113.0">
@@ -147,6 +157,9 @@
                            </HBox.margin>
                         </VBox>
                      </children>
+                     <VBox.margin>
+                        <Insets top="-5.0" />
+                     </VBox.margin>
                   </HBox>
                   <TableView maxWidth="600.0" minWidth="600.0" prefHeight="352.0" prefWidth="600.0" styleClass="table" VBox.vgrow="ALWAYS">
                     <columns>
@@ -170,6 +183,62 @@
                         <TableColumn prefWidth="90.0" styleClass="column-table" text="الإجمالي" />
                     </columns>
                   </TableView>
+                  <HBox prefHeight="26.0" prefWidth="608.0">
+                     <children>
+                        <Label text="عرض 5 صفحات من أصل 20" textFill="#797979">
+                           <font>
+                              <Font name="HSDream-Regular" size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="420.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label text="20-5" textFill="#797979">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Button maxHeight="16.0" maxWidth="16.0" minHeight="16.0" minWidth="16.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="16.0" styleClass="pagination-button" text="&gt;">
+                           <graphic>
+                              <Label text="&gt;" textFill="#717171">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Label>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets left="2.0" right="1.0" />
+                           </padding>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button layoutX="563.0" layoutY="10.0" maxHeight="16.0" maxWidth="16.0" minHeight="16.0" minWidth="16.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="16.0" styleClass="pagination-button" text="&gt;">
+                           <graphic>
+                              <Label text="&lt;" textFill="#717171">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                           </graphic>
+                           <padding>
+                              <Insets left="2.0" right="1.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets left="2.0" />
+                           </HBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </HBox>
                   <HBox>
                      <children>
                         <HBox maxWidth="1.7976931348623157E308" spacing="15.0" HBox.hgrow="ALWAYS">
@@ -269,7 +338,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <AnchorPane prefHeight="95.0" prefWidth="268.0" styleClass="add-delete-quantity-product-anchor" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="-1.0">
+                  <AnchorPane layoutX="1.0" maxHeight="105.0" minHeight="105.0" prefHeight="105.0" prefWidth="270.0" styleClass="add-delete-quantity-product-anchor" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                      <children>
                         <Button layoutX="16.0" layoutY="43.0" mnemonicParsing="false" prefWidth="115.0" styleClass="add-product-factory" text="إضافة الى الفاتورة" textFill="WHITE" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="12.0">
                            <font>
@@ -279,7 +348,6 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Button>
-                        <TextField layoutX="14.0" layoutY="12.0" prefHeight="25.0" prefWidth="115.0" promptText="أدخل الكمية" AnchorPane.leftAnchor="13.0" AnchorPane.topAnchor="11.0" />
                         <Button layoutX="145.0" layoutY="43.0" mnemonicParsing="false" prefWidth="115.0" styleClass="remove-product-from-factory" text="حذف من فاتورة" textFill="WHITE" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="12.0">
                            <font>
                               <Font name="HSDream-Regular" size="13.0" />
@@ -288,7 +356,26 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Button>
-                        <TextField layoutX="100.0" layoutY="12.0" prefHeight="25.0" prefWidth="115.0" promptText="ادخل السعر" AnchorPane.rightAnchor="12.0" />
+                        <VBox prefHeight="46.0" prefWidth="115.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="10.0">
+                           <children>
+                              <TextField focusTraversable="false" prefHeight="25.0" prefWidth="115.0" promptText="ادخل السعر" />
+                              <Label prefHeight="21.0" prefWidth="20.0" text="خطأ" textFill="RED">
+                                 <font>
+                                    <Font name="HSDream-Regular" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="14.0" prefHeight="32.0" prefWidth="115.0" AnchorPane.leftAnchor="13.0" AnchorPane.topAnchor="10.0">
+                           <children>
+                              <TextField focusTraversable="false" prefHeight="25.0" prefWidth="115.0" promptText="أدخل الكمية" />
+                              <Label text="خطأ" textFill="RED">
+                                 <font>
+                                    <Font name="HSDream-Regular" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
                      </children>
                   </AnchorPane>
                </children>

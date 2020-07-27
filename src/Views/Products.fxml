@@ -89,7 +89,10 @@
                                  </cursor>
                                  <font>
                                     <Font size="13.0" />
-                                 </font></Button>
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin></Button>
                               <Button maxHeight="26.0" maxWidth="70.0" minHeight="26.0" minWidth="70.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="70.0" styleClass="cancle-button-small" text="إلغاء" textFill="WHITE">
                                  <font>
                                     <Font size="13.0" />
