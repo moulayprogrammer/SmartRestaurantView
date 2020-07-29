@@ -60,7 +60,6 @@
 }
 .add-product{
 	-fx-background-color:#42B3C5;
-	
 }
 
 .save-button-small:hover{
@@ -230,4 +229,11 @@
 }
 .image-close-pop:hover{
 	-fx-opacity:1;
+}
+
+.select-provider{
+	-fx-background-color:#ffffff;
+	-fx-border-color: #ddd;
+	-fx-border-radius:5;
+	-fx-border-width:1;
 }

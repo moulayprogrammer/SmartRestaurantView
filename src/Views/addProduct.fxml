@@ -58,6 +58,9 @@
                      <VBox.margin>
                         <Insets top="-10.0" />
                      </VBox.margin>
+                     <font>
+                        <Font name="HSDream-Regular" size="12.0" />
+                     </font>
                   </TextField>
                   <Button maxHeight="30.0" maxWidth="110.0" minHeight="30.0" minWidth="110.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="110.0" styleClass="add-product" text="إضافة سلعة" textFill="WHITE">
                      <graphic>
