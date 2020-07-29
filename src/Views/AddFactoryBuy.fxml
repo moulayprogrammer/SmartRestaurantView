@@ -17,7 +17,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="RIGHT_TO_LEFT" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #F8F8F8;" stylesheets="@css/style.css" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="RIGHT_TO_LEFT" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #F8F8F8;" stylesheets="@css/style.css" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.BillController">
    <top>
       <AnchorPane style="-fx-background-color: FFF;" styleClass="bar-top" BorderPane.alignment="CENTER">
          <children>
@@ -100,7 +100,7 @@
                                     <Insets bottom="5.0" />
                                  </VBox.margin>
                               </Label>
-                              <TextField focusTraversable="false" promptText="إسم">
+                              <TextField fx:id="txt_Provider_Name" focusTraversable="false" promptText="إسم">
                                  <font>
                                     <Font name="HSDream-Regular" size="12.0" />
                                  </font>
@@ -125,7 +125,7 @@
                                     <Insets bottom="5.0" />
                                  </VBox.margin>
                               </Label>
-                              <TextField focusTraversable="false" promptText="0">
+                              <TextField fx:id="txt_Paid" focusTraversable="false" promptText="0">
                                  <font>
                                     <Font name="HSDream-Regular" size="12.0" />
                                  </font></TextField>
@@ -149,7 +149,7 @@
                                     <Insets bottom="5.0" />
                                  </VBox.margin>
                               </Label>
-                              <Label text="100" textFill="#444444">
+                              <Label fx:id="lbl_bill_total" alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="104.0" text="100" textAlignment="CENTER" textFill="#444444">
                                  <font>
                                     <Font name="HSDream-Regular" size="15.0" />
                                  </font>
@@ -164,7 +164,7 @@
                         <Insets top="-5.0" />
                      </VBox.margin>
                   </HBox>
-                  <TableView maxWidth="1.7976931348623157E308" styleClass="table" VBox.vgrow="ALWAYS">
+                  <TableView fx:id="table_Bill" maxWidth="1.7976931348623157E308" styleClass="table" VBox.vgrow="ALWAYS">
                     <columns>
                       <TableColumn prefWidth="70.0" styleClass="column-table">
                            <graphic>
@@ -173,17 +173,17 @@
                                     <Font size="9.0" />
                                  </font></JFXCheckBox>
                            </graphic></TableColumn>
-                      <TableColumn prefWidth="150.0" styleClass="column-table">
+                      <TableColumn fx:id="col_Product_Name" prefWidth="150.0" styleClass="column-table">
                            <graphic>
                               <Label maxWidth="1.7976931348623157E308" text="إسم السلعة">
                                  <font>
                                     <Font name="HSDream-Regular" size="12.0" />
                                  </font></Label>
                            </graphic></TableColumn>
-                        <TableColumn prefWidth="90.0" styleClass="column-table" text="الوحدة" />
-                        <TableColumn prefWidth="90.0" styleClass="column-table" text="الكمية" />
-                        <TableColumn editable="false" prefWidth="110.0" sortable="false" styleClass="column-table" text="سعر الوحدة" />
-                        <TableColumn prefWidth="100.0" styleClass="column-table" text="الإجمالي" />
+                        <TableColumn fx:id="col_Unit" prefWidth="90.0" styleClass="column-table" text="الوحدة" />
+                        <TableColumn fx:id="col_Quantity" prefWidth="90.0" styleClass="column-table" text="الكمية" />
+                        <TableColumn fx:id="col_Price" editable="false" prefWidth="110.0" sortable="false" styleClass="column-table" text="سعر الوحدة" />
+                        <TableColumn fx:id="col_Total_Price" prefWidth="100.0" styleClass="column-table" text="الإجمالي" />
                     </columns>
                   </TableView>
                   <HBox prefHeight="26.0" prefWidth="608.0">
@@ -327,7 +327,7 @@
                </padding></VBox>
             <AnchorPane layoutX="34.0" layoutY="57.0" prefHeight="512.0" prefWidth="270.0" style="-fx-background-color: white;" styleClass="select-product-factory" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="57.0">
                <children>
-                  <JFXListView layoutY="71.0" prefHeight="364.0" prefWidth="270.0" styleClass="list-view-products" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" />
+                  <JFXListView fx:id="listViewProduct" layoutX="4.0" layoutY="71.0" prefHeight="334.0" prefWidth="264.0" styleClass="list-view-products" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0" />
                   <TextField layoutX="14.0" layoutY="24.0" prefHeight="28.0" prefWidth="153.0" promptText="بحث عن سلعة" AnchorPane.leftAnchor="12.0">
                      <font>
                         <Font name="HSDream-Regular" size="13.0" />
@@ -361,7 +361,7 @@
                         </Button>
                         <VBox prefHeight="46.0" prefWidth="115.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="10.0">
                            <children>
-                              <TextField focusTraversable="false" prefHeight="25.0" prefWidth="115.0" promptText="ادخل السعر">
+                              <TextField fx:id="txt_price" focusTraversable="false" prefHeight="25.0" prefWidth="115.0" promptText="ادخل السعر">
                                  <font>
                                     <Font name="HSDream-Regular" size="12.0" />
                                  </font></TextField>
@@ -374,7 +374,7 @@
                         </VBox>
                         <VBox layoutX="14.0" prefHeight="32.0" prefWidth="115.0" AnchorPane.leftAnchor="13.0" AnchorPane.topAnchor="10.0">
                            <children>
-                              <TextField focusTraversable="false" prefHeight="25.0" prefWidth="115.0" promptText="أدخل الكمية">
+                              <TextField fx:id="txt_quantity" focusTraversable="false" prefHeight="25.0" prefWidth="115.0" promptText="أدخل الكمية">
                                  <font>
                                     <Font name="HSDream-Regular" size="12.0" />
                                  </font></TextField>

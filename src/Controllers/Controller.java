@@ -26,13 +26,25 @@ public class Controller implements Initializable {
         image = new Image("Images/Vector.png");
         userVector.setImage(image);*/
 
-        LaunchProviderScreen();
+        LaunchBillrScreen();
     }
 
     private void LaunchProviderScreen(){
         try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/Products.fxml"));
+            BorderPane temp = loader.load();
+            mainPane.getChildren().setAll(temp);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void LaunchBillrScreen(){
+        try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/AddFactoryBuy.fxml"));
             BorderPane temp = loader.load();
+            BillController billController = loader.getController();
+            billController.Init(temp);
             mainPane.getChildren().setAll(temp);
         } catch (IOException e) {
             e.printStackTrace();
