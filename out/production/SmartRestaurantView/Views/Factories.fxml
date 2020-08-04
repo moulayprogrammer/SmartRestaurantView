@@ -17,7 +17,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="RIGHT_TO_LEFT" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #F8F8F8;" stylesheets="@css/style.css" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="RIGHT_TO_LEFT" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #F8F8F8;" stylesheets="@css/style.css" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.BillListController">
    <top>
       <AnchorPane prefHeight="70.0" prefWidth="900.0" style="-fx-background-color: FFF;" styleClass="bar-top" BorderPane.alignment="CENTER">
          <children>
@@ -65,14 +65,6 @@
                                     <Insets top="20.0" />
                                  </VBox.margin>
                               </TextField>
-                              <Label text="خطأ" textFill="RED">
-                                 <font>
-                                    <Font name="HSDream-Regular" size="12.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets top="3.0" />
-                                 </VBox.margin>
-                              </Label>
                            </children>
                         </VBox>
                      </children>
@@ -82,7 +74,7 @@
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
                      <children>
-                        <Button maxHeight="35.0" maxWidth="150.0" minHeight="35.0" minWidth="150.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="150.0" styleClass="add-new-item" text="إضافة فاتورة جديدة" textFill="WHITE">
+                        <Button maxHeight="35.0" maxWidth="150.0" minHeight="35.0" minWidth="150.0" mnemonicParsing="false" onAction="#addNewBill" prefHeight="35.0" prefWidth="150.0" styleClass="add-new-item" text="إضافة فاتورة جديدة" textFill="WHITE">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -119,7 +111,7 @@
             </HBox>
             <VBox layoutX="394.0" layoutY="189.0" maxHeight="1.7976931348623157E308" spacing="20.0" style="-fx-background-color: FFF;" styleClass="container-table" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="140.0">
                <children>
-                  <TableView maxWidth="900.0" minWidth="850.0" prefWidth="900.0" styleClass="table" VBox.vgrow="ALWAYS">
+                  <TableView fx:id="billTable" maxWidth="900.0" minWidth="846.0" prefHeight="265.0" prefWidth="863.0" styleClass="table" VBox.vgrow="ALWAYS">
                     <columns>
                       <TableColumn prefWidth="85.0" styleClass="column-table">
                            <graphic>
@@ -131,15 +123,15 @@
                                     <Cursor fx:constant="HAND" />
                                  </cursor></JFXCheckBox>
                            </graphic></TableColumn>
-                      <TableColumn prefWidth="130.0" styleClass="column-table">
+                      <TableColumn fx:id="col_Bill_number" prefWidth="130.0" styleClass="column-table">
                            <graphic>
                               <Label text="رقم الفاتورة" />
                            </graphic></TableColumn>
-                        <TableColumn prefWidth="130.0" styleClass="column-table" text="تاريخ الفاتورة" />
-                        <TableColumn prefWidth="130.0" styleClass="column-table" text="إسم المورد" />
-                        <TableColumn editable="false" prefWidth="130.0" sortable="false" styleClass="column-table" text="المدفوع" />
-                        <TableColumn editable="false" prefWidth="130.0" sortable="false" styleClass="column-table" text="مدان بـ" />
-                        <TableColumn prefWidth="130.0" styleClass="column-table" text="الإجمالي" />
+                        <TableColumn fx:id="col_Date" prefWidth="130.0" styleClass="column-table" text="تاريخ الفاتورة" />
+                        <TableColumn fx:id="col_Provider" prefWidth="130.0" styleClass="column-table" text="إسم المورد" />
+                        <TableColumn fx:id="col_Paid" editable="false" prefWidth="130.0" sortable="false" styleClass="column-table" text="المدفوع" />
+                        <TableColumn fx:id="col_rest" editable="false" prefWidth="130.0" sortable="false" styleClass="column-table" text="مدان بـ" />
+                        <TableColumn fx:id="col_Total" prefWidth="119.0" styleClass="column-table" text="الإجمالي" />
                     </columns>
                      <VBox.margin>
                         <Insets top="10.0" />

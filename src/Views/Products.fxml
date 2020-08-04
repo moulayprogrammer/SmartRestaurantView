@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="500.0" maxWidth="440.0" minHeight="500.0" minWidth="440.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="500.0" prefWidth="440.0" style="-fx-background-color: #F8F8F8;" stylesheets="@css/style.css" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="mainPane"  maxHeight="500.0" maxWidth="440.0" minHeight="500.0" minWidth="440.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="500.0" prefWidth="440.0" style="-fx-background-color: #F8F8F8;" stylesheets="@css/style.css" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ProductController">
    <center>
       <AnchorPane maxHeight="500.0" maxWidth="440.0" minHeight="500.0" minWidth="440.0" prefHeight="500.0" prefWidth="440.0" styleClass="container" BorderPane.alignment="CENTER">
          <children>
@@ -23,7 +23,7 @@
                <children>
                   <HBox prefHeight="41.0" prefWidth="398.0">
                      <children>
-                        <Label text="قائمة السلع" textFill="#777777">
+                        <Label prefHeight="24.0" prefWidth="146.0" text="قائمة السلع" textFill="#777777">
                            <font>
                               <Font name="HSDream-Regular" size="18.0" />
                            </font>

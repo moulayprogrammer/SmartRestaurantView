@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXCheckBox?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
@@ -17,7 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="RIGHT_TO_LEFT" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #F8F8F8;" stylesheets="@css/style.css" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="RIGHT_TO_LEFT" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #F8F8F8;" stylesheets="@css/style.css" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ProviderController">
    <top>
       <AnchorPane prefHeight="70.0" prefWidth="900.0" style="-fx-background-color: FFF;" styleClass="bar-top" BorderPane.alignment="CENTER">
          <children>
@@ -74,7 +73,7 @@
                   </HBox>
                   <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
                      <children>
-                        <Button maxHeight="35.0" maxWidth="150.0" minHeight="35.0" minWidth="150.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="150.0" styleClass="add-new-item" text="اضافة مورد جديد " textFill="WHITE">
+                        <Button maxHeight="35.0" maxWidth="150.0" minHeight="35.0" minWidth="150.0" mnemonicParsing="false" onAction="#addNewProvider" prefHeight="35.0" prefWidth="150.0" styleClass="add-new-item" text="اضافة مورد جديد " textFill="WHITE">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -111,29 +110,19 @@
             </HBox>
             <VBox layoutX="394.0" layoutY="189.0" maxHeight="1.7976931348623157E308" spacing="20.0" style="-fx-background-color: FFF;" styleClass="container-table" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="140.0">
                <children>
-                  <TableView maxWidth="900.0" minWidth="850.0" prefWidth="900.0" styleClass="table" VBox.vgrow="ALWAYS">
+                  <TableView fx:id="providerTable" maxWidth="900.0" minWidth="850.0" prefWidth="900.0" styleClass="table" VBox.vgrow="ALWAYS">
                     <columns>
-                      <TableColumn prefWidth="70.0" styleClass="column-table">
-                           <graphic>
-                              <JFXCheckBox checkedColor="#ee3d48" text="0" textFill="WHITE" unCheckedColor="#848484">
-                                 <font>
-                                    <Font size="9.0" />
-                                 </font>
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor></JFXCheckBox>
-                           </graphic></TableColumn>
-                      <TableColumn prefWidth="90.0" styleClass="column-table">
+                      <TableColumn fx:id="col_id" prefWidth="101.0" styleClass="column-table" text="رقم التسجيل" />
+                      <TableColumn fx:id="col_name" prefWidth="76.0" styleClass="column-table">
                            <graphic>
                               <Label text="الإسم" />
                            </graphic></TableColumn>
-                        <TableColumn prefWidth="90.0" styleClass="column-table" text="اللقب" />
-                        <TableColumn prefWidth="90.0" styleClass="column-table" text="الوظيفة" />
-                        <TableColumn editable="false" prefWidth="120.0" sortable="false" styleClass="column-table" text="العنوان" />
-                        <TableColumn prefWidth="90.0" styleClass="column-table" text="رقم الهاتف" />
-                        <TableColumn prefWidth="90.0" styleClass="column-table" text="دائن" />
-                        <TableColumn prefWidth="90.0" styleClass="column-table" text="مدان بـ" />
-                        <TableColumn prefWidth="130.0" styleClass="column-table" text="رقم التسجيل" />
+                        <TableColumn fx:id="col_last_name" prefWidth="104.0" styleClass="column-table" text="اللقب" />
+                        <TableColumn fx:id="col_job" prefWidth="105.0" styleClass="column-table" text="الوظيفة" />
+                        <TableColumn fx:id="col_adress" editable="false" prefWidth="123.0" sortable="false" styleClass="column-table" text="العنوان" />
+                        <TableColumn fx:id="col_phone_number" prefWidth="155.0" styleClass="column-table" text="رقم الهاتف" />
+                        <TableColumn fx:id="col_creditor" prefWidth="92.0" styleClass="column-table" text="دائن" />
+                        <TableColumn fx:id="col_creditor_to" prefWidth="95.0" styleClass="column-table" text="مدان بـ" />
                     </columns>
                      <VBox.margin>
                         <Insets top="10.0" />

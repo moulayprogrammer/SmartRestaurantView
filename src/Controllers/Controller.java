@@ -1,9 +1,9 @@
 package Controllers;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
@@ -16,8 +16,9 @@ public class Controller implements Initializable {
 
     @FXML
     private AnchorPane mainPane;
+
     @FXML
-    ImageView logo,userVector;
+    private ImageView logo,userVector;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -26,12 +27,12 @@ public class Controller implements Initializable {
         image = new Image("Images/Vector.png");
         userVector.setImage(image);*/
 
-        LaunchBillrScreen();
+          //LaunchProviderScreen();
     }
 
     private void LaunchProviderScreen(){
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/Products.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/AddFactoryBuy.fxml"));
             BorderPane temp = loader.load();
             mainPane.getChildren().setAll(temp);
         } catch (IOException e) {
@@ -39,17 +40,7 @@ public class Controller implements Initializable {
         }
     }
 
-    private void LaunchBillrScreen(){
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/AddFactoryBuy.fxml"));
-            BorderPane temp = loader.load();
-            BillController billController = loader.getController();
-            billController.Init(temp);
-            mainPane.getChildren().setAll(temp);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+
 
     @FXML
     private void goToFirst(){
@@ -61,4 +52,43 @@ public class Controller implements Initializable {
             e.printStackTrace();
         }
     }
+    @FXML
+    void loadBillScreen(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/Factories.fxml"));
+            BorderPane temp = loader.load();
+            BillListController billListController = loader.getController();
+            billListController.Init(temp);
+            mainPane.getChildren().setAll(temp);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    void loadProductScreen(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/Products.fxml"));
+            BorderPane temp = loader.load();
+            ProductController productController = loader.getController();
+            productController.Init(temp);
+            mainPane.getChildren().setAll(temp);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    void loadProviderScreen(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/ProviderScreen.fxml"));
+            BorderPane temp = loader.load();
+            ProviderController providerController = loader.getController();
+            providerController.Init(temp);
+            mainPane.getChildren().setAll(temp);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 }

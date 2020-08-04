@@ -1,0 +1,97 @@
+package Controllers;
+
+import Model.BillList;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+
+import java.io.IOException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.ResourceBundle;
+import javafx.fxml.FXML;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.BorderPane;
+
+public class BillListController implements Initializable {
+    @FXML
+    private BorderPane mainPane;
+
+    @FXML
+    private TableView<BillList> billTable;
+
+    @FXML
+    private TableColumn<BillList, Integer> col_Bill_number;
+
+    @FXML
+    private TableColumn<BillList, String> col_Date;
+
+    @FXML
+    private TableColumn<BillList, String> col_Provider;
+
+    @FXML
+    private TableColumn<BillList, Integer> col_Paid;
+
+    @FXML
+    private TableColumn<BillList, Integer> col_rest;
+
+    @FXML
+    private TableColumn<BillList, Integer> col_Total;
+
+    private ArrayList<BillList> billLists = new ArrayList<>();
+    private ObservableList<BillList> dataTable = FXCollections.observableArrayList();
+/*
+*  private int number;
+    private String date;
+    private String provider_name;
+    private int Paid_up;
+    private int rest;
+    private int total;
+* **/
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        chargeListBill();
+        col_Bill_number.setCellValueFactory(new PropertyValueFactory<>("number"));
+        col_Date.setCellValueFactory(new PropertyValueFactory<>("date"));
+        col_Provider.setCellValueFactory(new PropertyValueFactory<>("provider_name"));
+        col_Paid.setCellValueFactory(new PropertyValueFactory<>("Paid_up"));
+        col_rest.setCellValueFactory(new PropertyValueFactory<>("rest"));
+        col_Total.setCellValueFactory(new PropertyValueFactory<>("total"));
+        dataTable.setAll(billLists);
+        billTable.setItems(dataTable);
+
+    }
+
+    public void Init(BorderPane mainPane) {
+        this.mainPane = mainPane;
+    }
+
+    @FXML
+    void addNewBill(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/AddFactoryBuy.fxml"));
+            BorderPane temp = loader.load();
+            BillController billController = loader.getController();
+            billController.Init(temp);
+            mainPane.getChildren().setAll(temp);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    private void chargeListBill(){
+        for (int i = 1; i < 10; i++) {
+            BillList billList = new BillList();
+            billList.setNumber(i);
+            billList.setProvider_name("selmani");
+            billList.setDate((i*2+1)+"/"+i+"/2020");
+            billList.setPaid_up(i*1255);
+            billList.setTotal(i*1525);
+            billList.setRest(billList.getTotal()-billList.getPaid_up());
+            billLists.add(billList);
+        }
+    }
+}

@@ -10,5 +10,6 @@
     <orderEntry type="library" name="fontawesomefx-8.9" level="project" />
     <orderEntry type="library" name="jfoenix-8.1.8" level="project" />
     <orderEntry type="library" name="jfoenix" level="project" />
+    <orderEntry type="library" name="jfoenix1" level="project" />
   </component>
 </module>
