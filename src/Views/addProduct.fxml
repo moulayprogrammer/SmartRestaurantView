@@ -46,7 +46,7 @@
                         <Insets top="-10.0" />
                      </VBox.margin>
                   </Label>
-                  <TextField focusTraversable="false" maxHeight="28.0" maxWidth="250.0" minHeight="28.0" minWidth="250.0" prefHeight="28.0" prefWidth="250.0" promptText="إسم السلعة">
+                  <TextField focusTraversable="false" maxHeight="28.0" maxWidth="250.0" minHeight="28.0" minWidth="250.0" prefHeight="28.0" prefWidth="250.0" promptText="إسم السلعة" styleClass="input-popup">
                      <VBox.margin>
                         <Insets top="10.0" />
                      </VBox.margin>
@@ -54,7 +54,7 @@
                         <Font name="HSDream-Regular" size="14.0" />
                      </font>
                   </TextField>
-                  <TextField focusTraversable="false" maxHeight="28.0" maxWidth="250.0" minHeight="28.0" minWidth="250.0" prefHeight="28.0" prefWidth="250.0" promptText="الوحدة">
+                  <TextField focusTraversable="false" maxHeight="28.0" maxWidth="250.0" minHeight="28.0" minWidth="250.0" prefHeight="28.0" prefWidth="250.0" promptText="الوحدة" styleClass="input-popup">
                      <VBox.margin>
                         <Insets top="-10.0" />
                      </VBox.margin>
