@@ -12,6 +12,8 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
+import javafx.scene.control.DialogPane;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -82,6 +84,8 @@ public class BillListController implements Initializable {
             e.printStackTrace();
         }
     }
+
+
     private void chargeListBill(){
         for (int i = 1; i < 10; i++) {
             BillList billList = new BillList();

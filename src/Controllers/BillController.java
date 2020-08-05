@@ -4,8 +4,10 @@ import Model.Bill;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 
+import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -16,6 +18,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class BillController implements Initializable {
 
@@ -64,6 +68,9 @@ public class BillController implements Initializable {
     @FXML
     private Label lbl_date;
 
+    @FXML
+    private Button closeButton;
+
     private ObservableList<Bill> dataTable = FXCollections.observableArrayList();
     private ObservableList<String> dataTableView = FXCollections.observableArrayList();
     private ArrayList<Bill> list_Bill = new ArrayList<>();
@@ -73,6 +80,12 @@ public class BillController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
+        // txt_Provider_Name.setText("naily maz");
+    }
+
+    public void Init(BorderPane mainPane) {
+        this.mainPane = mainPane;
         chargeListProduct();
         col_Product_Name.setCellValueFactory(new PropertyValueFactory<>("name"));
         col_Unit.setCellValueFactory(new PropertyValueFactory<>("unit"));
@@ -83,11 +96,6 @@ public class BillController implements Initializable {
         listViewProduct.setItems(dataTableView);
         lbl_bill_total.setText(total_bill_Price + ".00");
         lbl_date.setText(LocalDate.now().toString());
-        // txt_Provider_Name.setText("naily maz");
-    }
-
-    public void Init(BorderPane mainPane) {
-        this.mainPane = mainPane;
     }
 
     private void chargeListProduct() {
@@ -104,7 +112,25 @@ public class BillController implements Initializable {
             list_Product.add("طماطم");
         }
     }
+    @FXML
+    void showProductList(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../Views/Products.fxml"));
+            DialogPane temp = loader.load();
+            Dialog<ButtonType> dialog = new Dialog<>();
+            dialog.setDialogPane(temp);
+            dialog.initStyle(StageStyle.UNDECORATED);
+            dialog.showAndWait();
 
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    @FXML
+    void close(ActionEvent event) {
+        Stage stage = (Stage) closeButton.getScene().getWindow();
+        stage.close();
+    }
 
     @FXML
     void insertProductBill(ActionEvent event) {
