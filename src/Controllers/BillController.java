@@ -18,6 +18,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -70,6 +71,9 @@ public class BillController implements Initializable {
 
     @FXML
     private Button closeButton;
+
+    @FXML
+    private VBox vboxBillOption;
 
     private ObservableList<Bill> dataTable = FXCollections.observableArrayList();
     private ObservableList<String> dataTableView = FXCollections.observableArrayList();
@@ -177,4 +181,5 @@ public class BillController implements Initializable {
         lbl_bill_total.setText(total_bill_Price + ".00");
 
     }
+
 }

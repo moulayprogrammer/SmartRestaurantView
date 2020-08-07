@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="RIGHT_TO_LEFT" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #F8F8F8;" stylesheets="@css/style.css" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ProviderController">
+<BorderPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="RIGHT_TO_LEFT" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #F8F8F8;" stylesheets="@css/style.css" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ProviderController">
    <top>
       <AnchorPane prefHeight="70.0" prefWidth="900.0" style="-fx-background-color: FFF;" styleClass="bar-top" BorderPane.alignment="CENTER">
          <children>
@@ -250,7 +250,7 @@
                   </HBox>
                   <HBox alignment="CENTER_LEFT" minWidth="300.0" prefHeight="154.0" prefWidth="378.0" spacing="20.0">
                      <children>
-                        <Button maxHeight="35.0" maxWidth="100.0" minHeight="35.0" minWidth="100.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="100.0" styleClass="all-jobs" text="عرض الوظائف">
+                        <Button maxHeight="35.0" maxWidth="100.0" minHeight="35.0" minWidth="100.0" mnemonicParsing="false" onAction="#showListJob" prefHeight="35.0" prefWidth="100.0" styleClass="all-jobs" text="عرض الوظائف">
                            <HBox.margin>
                               <Insets top="-75.0" />
                            </HBox.margin>
@@ -282,7 +282,7 @@
                            <children>
                               <VBox prefHeight="101.0" prefWidth="81.0">
                                  <children>
-                                    <Button contentDisplay="RIGHT" maxHeight="35.0" maxWidth="81.0" minHeight="35.0" minWidth="81.0" mnemonicParsing="false" onAction="#slideShowHide" prefHeight="35.0" prefWidth="81.0" styleClass="more-button" text="المزيد" textFill="#42b3c5">
+                                    <Button contentDisplay="RIGHT" maxHeight="35.0" maxWidth="81.0" minHeight="35.0" minWidth="81.0" mnemonicParsing="false" onAction="#showHideProviderOperation" prefHeight="35.0" prefWidth="81.0" styleClass="more-button" text="المزيد" textFill="#42b3c5">
                                        <font>
                                           <Font size="16.0" />
                                        </font>

@@ -18,6 +18,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.VBox;
 
 public class BillListController implements Initializable {
     @FXML
@@ -44,19 +45,17 @@ public class BillListController implements Initializable {
     @FXML
     private TableColumn<BillList, Integer> col_Total;
 
+    @FXML
+    private VBox vboxBillOption;
+
+
     private ArrayList<BillList> billLists = new ArrayList<>();
     private ObservableList<BillList> dataTable = FXCollections.observableArrayList();
-/*
-*  private int number;
-    private String date;
-    private String provider_name;
-    private int Paid_up;
-    private int rest;
-    private int total;
-* **/
+    private boolean visible = false;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         chargeListBill();
+        vboxBillOption.setVisible(false);
         col_Bill_number.setCellValueFactory(new PropertyValueFactory<>("number"));
         col_Date.setCellValueFactory(new PropertyValueFactory<>("date"));
         col_Provider.setCellValueFactory(new PropertyValueFactory<>("provider_name"));
@@ -96,6 +95,17 @@ public class BillListController implements Initializable {
             billList.setTotal(i*1525);
             billList.setRest(billList.getTotal()-billList.getPaid_up());
             billLists.add(billList);
+        }
+    }
+    @FXML
+    void slideShowHide(ActionEvent event) {
+        if (!visible){
+            vboxBillOption.setVisible(true);
+            visible = true;
+        }
+        else{ vboxBillOption.setVisible(false);
+            visible = false;
+
         }
     }
 }
