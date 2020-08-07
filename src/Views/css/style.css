@@ -32,7 +32,7 @@
 	-fx-background-color:#3DAABB;
 }
 .more-button-products:hover{
-	-fx-font-size:12;
+	-fx-font-size:13;
 	-fx-background-color:#3DAABB;	
 }
 
@@ -90,7 +90,7 @@
 	-fx-background-color:#E2323D;
 	
 }
-.extract-button{
+.extract-button, .all-jobs{
 	-fx-background-color:#FBFBFB;
 	-fx-font-family: 'HSDream-Regular';
 	-fx-border-color:#D5D5D5;
@@ -98,6 +98,11 @@
     -fx-background-insets: 0;
 	-fx-border-radius:3;
 }
+.all-jobs:hover{
+	-fx-font-size:14;
+	-fx-background-color:#F3F3F3;
+}
+
 .save-button:hover{
 	-fx-font-size:14;
 	-fx-background-color:#3DAABB;
