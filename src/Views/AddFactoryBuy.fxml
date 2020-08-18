@@ -53,7 +53,7 @@
                      <children>
                         <VBox alignment="CENTER" prefHeight="200.0" prefWidth="113.0">
                            <children>
-                              <Label text="رقم الفاتورة" textFill="#2d8b9a">
+                              <Label styleClass="font-hs-dream" text="رقم الفاتورة" textFill="#2d8b9a">
                                  <font>
                                     <Font name="HSDream-Regular" size="16.0" />
                                  </font>
@@ -61,7 +61,7 @@
                                     <Insets bottom="5.0" />
                                  </VBox.margin>
                               </Label>
-                              <Label text="02" textFill="#444444">
+                              <Label styleClass="font-hs-dream" text="02" textFill="#444444">
                                  <font>
                                     <Font name="HSDream-Regular" size="15.0" />
                                  </font>
@@ -73,7 +73,7 @@
                         </VBox>
                         <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="113.0">
                            <children>
-                              <Label text="تاريخ الفاتورة" textFill="#2d8b9a">
+                              <Label styleClass="font-hs-dream" text="تاريخ الفاتورة" textFill="#2d8b9a">
                                  <font>
                                     <Font name="HSDream-Regular" size="16.0" />
                                  </font>
@@ -81,7 +81,7 @@
                                     <Insets bottom="5.0" />
                                  </VBox.margin>
                               </Label>
-                              <Label fx:id="lbl_date" text="25-07-2020" textFill="#444444">
+                              <Label fx:id="lbl_date" styleClass="font-hs-dream" text="25-07-2020" textFill="#444444">
                                  <font>
                                     <Font name="HSDream-Regular" size="15.0" />
                                  </font>
@@ -93,7 +93,7 @@
                         </VBox>
                         <VBox alignment="CENTER" layoutX="110.0" layoutY="10.0" prefHeight="200.0" prefWidth="110.0">
                            <children>
-                              <Label text="إسم المورد" textFill="#2d8b9a">
+                              <Label styleClass="font-hs-dream" text="إسم المورد" textFill="#2d8b9a">
                                  <font>
                                     <Font name="HSDream-Regular" size="16.0" />
                                  </font>
@@ -109,7 +109,7 @@
                         </VBox>
                         <VBox alignment="CENTER" layoutX="210.0" layoutY="10.0" prefHeight="200.0" prefWidth="110.0">
                            <children>
-                              <Label text="المدفوع" textFill="#2d8b9a">
+                              <Label styleClass="font-hs-dream" text="المدفوع" textFill="#2d8b9a">
                                  <font>
                                     <Font name="HSDream-Regular" size="16.0" />
                                  </font>
@@ -128,7 +128,7 @@
                         </VBox>
                         <VBox alignment="CENTER" layoutX="310.0" layoutY="10.0" prefHeight="200.0" prefWidth="113.0">
                            <children>
-                              <Label text="الإجمالي" textFill="#2d8b9a">
+                              <Label styleClass="font-hs-dream" text="الإجمالي" textFill="#2d8b9a">
                                  <font>
                                     <Font name="HSDream-Regular" size="16.0" />
                                  </font>
@@ -136,7 +136,7 @@
                                     <Insets bottom="5.0" />
                                  </VBox.margin>
                               </Label>
-                              <Label fx:id="lbl_bill_total" alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="104.0" text="00" textAlignment="CENTER" textFill="#444444">
+                              <Label fx:id="lbl_bill_total" alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="104.0" styleClass="font-hs-dream" text="00" textAlignment="CENTER" textFill="#444444">
                                  <font>
                                     <Font name="HSDream-Regular" size="15.0" />
                                  </font>
