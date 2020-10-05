@@ -26,18 +26,11 @@
                      <children>
                         <TableView fx:id="providerTable" styleClass="table" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
                           <columns>
-                            <TableColumn fx:id="col_id" prefWidth="101.0" styleClass="column-table" text="رقم التسجيل" />
-                            <TableColumn fx:id="col_name" prefWidth="76.0" styleClass="column-table">
-                                 <graphic>
-                                    <Label text="الإسم" />
-                                 </graphic>
-                              </TableColumn>
-                              <TableColumn fx:id="col_last_name" prefWidth="104.0" styleClass="column-table" text="اللقب" />
-                              <TableColumn fx:id="col_job" prefWidth="105.0" styleClass="column-table" text="الوظيفة" />
-                              <TableColumn fx:id="col_adress" editable="false" prefWidth="123.0" sortable="false" styleClass="column-table" text="العنوان" />
-                              <TableColumn fx:id="col_phone_number" prefWidth="155.0" styleClass="column-table" text="رقم الهاتف" />
-                              <TableColumn fx:id="col_creditor" prefWidth="92.0" styleClass="column-table" text="دائن" />
-                              <TableColumn fx:id="col_creditor_to" prefWidth="100.0" styleClass="column-table" text="مدان بـ" />
+                            <TableColumn fx:id="col_id" prefWidth="140.0" styleClass="column-table" text="رقم الوجبة" />
+                              <TableColumn fx:id="col_last_name" prefWidth="200.0" styleClass="column-table" text="صورة الوجبة" />
+                              <TableColumn fx:id="col_job" prefWidth="180.0" styleClass="column-table" text="إسم الوجبة" />
+                              <TableColumn fx:id="col_adress" editable="false" prefWidth="200.0" sortable="false" styleClass="column-table" text="وصف الوجبة" />
+                              <TableColumn fx:id="col_phone_number" prefWidth="120.0" styleClass="column-table" text="السعر" />
                           </columns>
                         </TableView>
                      </children>
@@ -250,20 +243,9 @@
                         <Cursor fx:constant="DEFAULT" />
                      </cursor>
                   </HBox>
-                  <HBox alignment="CENTER_LEFT" minWidth="300.0" prefHeight="154.0" prefWidth="378.0" spacing="20.0">
+                  <HBox alignment="CENTER_RIGHT" minWidth="300.0" prefHeight="154.0" prefWidth="378.0" spacing="20.0">
                      <children>
-                        <Button maxHeight="35.0" maxWidth="100.0" minHeight="35.0" minWidth="100.0" mnemonicParsing="false" onAction="#showListJob" prefHeight="35.0" prefWidth="100.0" styleClass="all-jobs" text="عرض الوظائف">
-                           <HBox.margin>
-                              <Insets top="-75.0" />
-                           </HBox.margin>
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Button>
-                        <Button maxHeight="35.0" maxWidth="150.0" minHeight="35.0" minWidth="150.0" mnemonicParsing="false" onAction="#addNewProvider" prefHeight="35.0" prefWidth="150.0" styleClass="add-new-item" text="اضافة مورد جديد " textFill="WHITE">
+                        <Button maxHeight="35.0" maxWidth="150.0" minHeight="35.0" minWidth="150.0" mnemonicParsing="false" onAction="#addNewProvider" prefHeight="35.0" prefWidth="150.0" styleClass="add-new-item" text="اضافة وجبة جديدة" textFill="WHITE">
                            <font>
                               <Font size="16.0" />
                            </font>

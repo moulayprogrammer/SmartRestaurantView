@@ -17,7 +17,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="RIGHT_TO_LEFT" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #F8F8F8;" stylesheets="@css/style.css" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.BillListController">
+<BorderPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="RIGHT_TO_LEFT" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #F8F8F8;" stylesheets="@css/style.css" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.BillListController">
    <top>
       <AnchorPane prefHeight="70.0" prefWidth="900.0" style="-fx-background-color: FFF;" styleClass="bar-top" BorderPane.alignment="CENTER">
          <children>
@@ -60,62 +60,70 @@
                         <Insets top="10.0" />
                      </VBox.margin>
                   </TableView>
-                  <HBox prefHeight="26.0" prefWidth="608.0">
+                  <AnchorPane prefHeight="20.0" prefWidth="200.0">
                      <children>
-                        <Label text="عرض 5 صفحات من أصل 20" textFill="#797979">
-                           <font>
-                              <Font name="HSDream-Regular" size="13.0" />
-                           </font>
-                           <HBox.margin>
-                              <Insets right="670.0" />
-                           </HBox.margin>
-                        </Label>
-                        <Label text="20-5" textFill="#797979">
-                           <font>
-                              <Font size="13.0" />
-                           </font>
-                        </Label>
-                        <Button maxHeight="16.0" maxWidth="16.0" minHeight="16.0" minWidth="16.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="16.0" styleClass="pagination-button" text="&gt;">
-                           <graphic>
-                              <Label text="&gt;" textFill="#717171">
+                        <HBox prefHeight="20.0" AnchorPane.leftAnchor="0.0">
+                           <children>
+                              <Label text="عرض 5 صفحات من أصل 20" textFill="#797979">
                                  <font>
-                                    <Font size="11.0" />
+                                    <Font name="HSDream-Regular" size="13.0" />
                                  </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="TOP_RIGHT" prefHeight="20.0" prefWidth="200.0" AnchorPane.rightAnchor="0.0">
+                           <children>
+                              <Label text="20-5" textFill="#797979">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <Button maxHeight="16.0" maxWidth="16.0" minHeight="16.0" minWidth="16.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="16.0" styleClass="pagination-button" text="&gt;">
+                                 <graphic>
+                                    <Label text="&gt;" textFill="#717171">
+                                       <font>
+                                          <Font size="11.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Label>
+                                 </graphic>
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                                 <padding>
+                                    <Insets left="2.0" right="1.0" />
+                                 </padding>
                                  <cursor>
                                     <Cursor fx:constant="HAND" />
                                  </cursor>
-                              </Label>
-                           </graphic>
-                           <HBox.margin>
-                              <Insets left="5.0" />
-                           </HBox.margin>
-                           <padding>
-                              <Insets left="2.0" right="1.0" />
-                           </padding>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Button>
-                        <Button layoutX="563.0" layoutY="10.0" maxHeight="16.0" maxWidth="16.0" minHeight="16.0" minWidth="16.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="16.0" styleClass="pagination-button" text="&gt;">
-                           <graphic>
-                              <Label text="&lt;" textFill="#717171">
-                                 <font>
-                                    <Font size="11.0" />
-                                 </font>
-                              </Label>
-                           </graphic>
-                           <padding>
-                              <Insets left="2.0" right="1.0" />
-                           </padding>
-                           <HBox.margin>
-                              <Insets left="2.0" />
-                           </HBox.margin>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Button>
+                              </Button>
+                              <Button maxHeight="16.0" maxWidth="16.0" minHeight="16.0" minWidth="16.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="16.0" styleClass="pagination-button" text="&gt;">
+                                 <graphic>
+                                    <Label text="&lt;" textFill="#717171">
+                                       <font>
+                                          <Font size="11.0" />
+                                       </font>
+                                    </Label>
+                                 </graphic>
+                                 <padding>
+                                    <Insets left="2.0" right="1.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets left="2.0" />
+                                 </HBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </HBox>
                      </children>
-                  </HBox>
+                  </AnchorPane>
                   <HBox>
                      <children>
                         <HBox maxWidth="1.7976931348623157E308" spacing="15.0" HBox.hgrow="ALWAYS">
